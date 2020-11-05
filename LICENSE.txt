@@ -46,6 +46,7 @@ $ cat readme.txt
 $ git reflog
 
 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
+$ git restore readme.txt
 $ git checkout -- readme.txt
 $ git rm test.txt
 
