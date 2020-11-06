@@ -99,6 +99,10 @@ $ git pull
 git pull --rebase
 设置dev和origin/dev的链接
 $ git branch --set-upstream-to=origin/dev dev
+查看所有远程分支
+$ git branch -r
+基于远程分支创建本地分支
+$ git checkout -b 本地分支名x origin/远程分支名x
 
 查看远程库信息，使用git remote -v；
 
