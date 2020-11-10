@@ -9,3 +9,9 @@ java -jar flowable-modeler.war &
 
 nohup java -jar flowable-modeler.war > flowable.log &
 将输出打印到flowable.log文件中，不打印到屏幕上，若不指定文件，则默认打印到nohup.out文件中
+
+查看jar包进程：
+ps -ef|grep xxx.jar
+ps aux|grep xxx.jar
+
+其中1234则为此jar的pid，杀掉命令为    kill -9 1234
