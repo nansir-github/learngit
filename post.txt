@@ -1,0 +1,9 @@
+Windows
+1、netstat -ano
+3、找到需要释放的端口pid
+3、taskkill /pid <pid> -f 
+
+linux
+1、lsof -i :<端口号>  netstat -anp|grep <端口号>
+2、找到需要释放的端口pid
+3、kill <pid>

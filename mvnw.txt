@@ -1,0 +1,34 @@
+安装Maven Wrapper最简单的方式是在项目的根目录（即pom.xml所在的目录）下运行安装命令：
+mvn -N io.takari:maven:0.7.6:wrapper
+
+如果要指定使用的Maven版本，使用下面的安装命令指定版本，例如3.3.3：
+mvn -N io.takari:maven:0.7.6:wrapper -Dmaven=3.3.3
+
+安装后，查看项目结构：
+my-project
+├── .mvn
+│   └── wrapper
+│       ├── MavenWrapperDownloader.java
+│       ├── maven-wrapper.jar
+│       └── maven-wrapper.properties
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   └── resources
+    └── test
+        ├── java
+        └── resources
+
+发现多了mvnw、mvnw.cmd和.mvn目录，我们只需要把mvn命令改成mvnw就可以使用跟项目关联的Maven。例如：
+
+mvnw clean package
+在Linux或macOS下运行时需要加上./：
+
+./mvnw clean package
+
+
+启动springboot
+./mvnw spring-boot:run
