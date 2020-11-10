@@ -1,0 +1,11 @@
+linux jar/war包 后台运行
+1. 基础版，当前ssh窗口锁定，按CTRL+C打断程序运行；或关闭窗口，程序退出
+
+java -jar flowable-modeler.war
+2. 改进版，当前ssh窗口不锁定，窗口关闭时，程序终止运行（&代表在后台运行）
+
+java -jar flowable-modeler.war &
+3. 实用版，当账户退出或者终端关闭，程序仍然运行（nohup意思是不挂断运行命令）
+
+nohup java -jar flowable-modeler.war > flowable.log &
+将输出打印到flowable.log文件中，不打印到屏幕上，若不指定文件，则默认打印到nohup.out文件中
